@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>HI</pattern>
+    <template>I am tourism bot
+    HOW CAN I HELP YOU
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME ABOUT *</pattern>
+    <template> here is some information <star/>.
+    <button>
+       <text>Click here</text>
+       <url> https://en.wikipedia.org/wiki/ <star/></url>
+       
+    </button>
+    </template>
+ </category>
+ 
+  <category>
+    	<pattern>SHOW ME A MAP OF *</pattern>
+    	<template>
+        	Here is a map of <star/>.
+        	<button>
+            	<text>Click here</text>
+            	<url>https://www.google.co.uk/maps?q=<star/></url>
+        	</button>
+    	</template>
+	</category>
+    <category>
+    	<pattern>WHAT IS THE WEATHER IN *</pattern>
+    	<template>
+        I hope it's a nice day in <star/>.
+        	<button>
+            	<text>Click here for the forecast</text>
+            	<url>https://www.weather-forecast.com/locations/<star/>/forecasts/latest</url>
+        	</button>
+    	</template>
+	</category>
+    
+	
+
+    
+	<category>
+    	<pattern>WHAT IS THE WEATHER LIKE THERE</pattern>
+    	<template>
+        	<condition name="it">
+            	<li value="*"><srai>What is the weather in <get name="it"/></srai></li>
+            	<li>The weather where?</li>
+        	</condition>
+    	</template>
+	</category>
+
+
+	
+</aiml>
